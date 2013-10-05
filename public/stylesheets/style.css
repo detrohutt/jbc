@@ -7431,6 +7431,11 @@ body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu {
 body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu li a {
   color: #999999;
 }
+@media (min-width: 768px) {
+  body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu li a {
+    padding: 16px 15px;
+  }
+}
 body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu li a:hover {
   background-color: #222222;
   background-image: none;
