@@ -7397,6 +7397,10 @@ a .icon-flip-vertical:before {
 }
 body {
   padding-top: 50px;
+}
+body #wrap {
+  text-align: center;
+  padding: 40px 15px;
   margin: 15px;
 }
 p.phone {
@@ -7404,10 +7408,6 @@ p.phone {
   line-height: 1.42857;
   color: #1241e6;
   text-shadow: 0 0 .12em  #000000;
-}
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
 }
 .container {
   max-width: none;
@@ -7449,7 +7449,7 @@ button.navbar-toggle {
 .dropdown-menu {
   font-size: 19px;
 }
-.dropdown-menu > li > a {
+back .dropdown-menu > li > a {
   color: #999999;
 }
 .dropdown-menu > li > a:hover,
@@ -7480,8 +7480,12 @@ body {
   height: 100%;
   margin: 0 auto -40px;
 }
+#push,
 footer {
-  margin-top: -135px;
+  height: 80px;
+}
+footer {
+  margin-top: 40px;
   padding: 32px 0px;
   background: #f0f0f0;
 }

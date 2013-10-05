@@ -14,6 +14,8 @@ html.no-js
     title= title
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name="msapplication-TileColor", content="#D83434")
+    meta(name="msapplication-TileImage", content="../favicon.png")
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/jquery/jquery.js')
     script(src='/javascripts/bootstrap/bootstrap.js')
@@ -24,6 +26,36 @@ html.no-js
         | You are using an <strong>outdated</strong> browser.
         | Please <a href="http://browsehappy.com/">upgrade your browser</a>
         | to improve your experience.
+
+    .navbar.navbar-fixed-top.navbar-inverse
+      .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/index')
+            img.img-responsive(src='/images/jbc_logo.png')
+        .spacing
+          .navbar-collapse.collapse.main-nav
+            ul.nav.navbar-nav
+              li.active
+                a(href='/index') About Us
+              li
+                a(href='/services') Services/Pricing
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  | Community
+                  b.caret
+                ul.dropdown-menu.navbar-inverse
+                  li
+                    a(href='#') News
+                  li
+                    a(href='#') Testimonials
+                  li
+                    a(href='#') Charity Log
+            p.phone.pull-right.visible-lg 478-451-7249
+
 
     #wrap
       block content

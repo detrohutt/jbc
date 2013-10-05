@@ -1,6 +1,30 @@
 body {
   padding-top: 50px;
-  margin: 15px;
+
+  .navbar {
+    font-family: gputeks;
+    font-size: 21px;
+
+    .navbar-brand {
+      padding: 5px 0px;
+      margin-left: auto;
+
+      & > img {
+        max-width: 160px;
+        display: inline-block;
+      }
+    }
+  }
+
+  #wrap {
+    .text-center;
+    padding: 40px 15px;
+    margin: 15px;
+
+    .container {
+      max-width: none;
+    }
+  }
 }
 p.phone {
   margin-top: 27.5px;
@@ -8,27 +32,8 @@ p.phone {
   color: #1241e6;
   text-shadow: 0 0 .12em  #000000; 
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
-.container {
-max-width: none;
-}
 .spacing {
 margin: 0px 10px;
-}
-.navbar {
-  font-family: gputeks;
-  font-size: 21px;
-}
-.navbar-brand {
-  padding: 5px 0px;
-  margin-left: auto;
-}
-.navbar-brand  > img{
-  max-width: 160px;
-  display: inline-block;
 }
 .navbar-collapse {
 line-height: 0px;
@@ -52,8 +57,13 @@ button.navbar-toggle {
 .dropdown-menu {
 	font-size: 19px;
 }
-.dropdown-menu > li > a {
-	color: #999999;
+.dropdown-menu {
+  back
+  & > li {
+    & > a {
+      color: #999999;
+    }
+  }
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
@@ -88,11 +98,11 @@ html, body {
 }
 
 #push, footer {
-//	height: 80px;
+  height: 80px;
 }
 
 footer {
-	margin-top: -135px;
+	margin-top: 40px;
 	padding: 32px 0px;
 	background: #f0f0f0;
 }

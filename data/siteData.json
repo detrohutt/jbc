@@ -1,8 +1,9 @@
 {
   "globalData": {
-    "title": "jbc"
+    "title": "Just Better Computers"
   },
   "pageData": {
-    "index": {}
+    "index": {},
+    "services": {}
   }
 }
