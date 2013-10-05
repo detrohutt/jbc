@@ -1,0 +1,19 @@
+{
+  "name" : "jbc",
+  "version" : "0.0.1",
+  "private" : true,
+  "scripts" : {
+	"start" : "node app.js"
+  },
+  "dependencies": {
+  	"express" : ">=3.3.4",
+  	"jade" : "*",
+  	"less-middleware" : "*",
+    "merge": "*"
+  },
+  "author" : {
+  	"name" : "detrohutt",
+  	"email" : "aj_roberts_50k@msn.com"
+  },
+  "description" : "Just Better Computers Playground"
+}
