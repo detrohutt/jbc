@@ -29,32 +29,31 @@ html.no-js
 
     .navbar.navbar-fixed-top.navbar-inverse
       .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/index')
-            img.img-responsive(src='/images/jbc_logo.png')
-        .spacing
-          .navbar-collapse.collapse.main-nav
-            ul.nav.navbar-nav
-              li.active
-                a(href='/index') About Us
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/index')
+          img.img-responsive(src='/images/jbc_logo.png')
+      .navbar-collapse.collapse.main-nav
+        ul.nav.navbar-nav
+          li.active
+            a(href='/index') About Us
+          li
+            a(href='/services') Services/Pricing
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | Community
+              b.caret
+            ul.dropdown-menu.navbar-inverse
               li
-                a(href='/services') Services/Pricing
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
-                  | Community
-                  b.caret
-                ul.dropdown-menu.navbar-inverse
-                  li
-                    a(href='#') News
-                  li
-                    a(href='#') Testimonials
-                  li
-                    a(href='#') Charity Log
-            p.phone.pull-right.visible-lg 478-451-7249
+                a(href='#') News
+              li
+                a(href='#') Testimonials
+              li
+                a(href='#') Charity Log
+        p.phone.pull-right.visible-lg 478-451-7249
 
 
     #wrap
@@ -64,7 +63,7 @@ html.no-js
     footer
       p.text-muted.text-center
         - var date = new Date, date = date.getFullYear();
-        | &copy; #{date} jbc, all rights reserved. Site created by detrohutt
+        | &copy; #{date} Just Better Computers, all rights reserved. Site created by A.J. Roberts
 
     
     script.

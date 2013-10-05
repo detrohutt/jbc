@@ -1,3 +1,12 @@
+//variables
+@lighterGrey: lighten(@grey, 8%);
+@lightGrey: lighten(@grey, 5%);
+@grey: #999;
+@darkGrey: darken(@grey, 5%);
+@darkerGrey: darken(@grey, 8%);
+
+@white: #fdfdfd;
+
 body {
   padding-top: 50px;
 
@@ -5,13 +14,72 @@ body {
     font-family: gputeks;
     font-size: 21px;
 
-    .navbar-brand {
-      padding: 5px 0px;
-      margin-left: auto;
+    .navbar-header {
+      button.navbar-toggle {
+        top: 18px;
+      }
 
-      & > img {
-        max-width: 160px;
+      .navbar-brand {
+        padding: 5px 0px;
+        margin-left: 8px;
+
+        & > img {
+          max-width: 160px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      line-height: 0px;
+      text-align: center;
+      padding: 0px 8px;
+
+      .navbar-nav {
+        float: none;
         display: inline-block;
+      
+        li {
+          a {
+            padding: 32.5px 15px;
+          }
+
+          ul.dropdown-menu {
+            font-size: 19px;
+
+            li {
+              a {
+                color: #999999;
+              }
+              @media (min-width: 768px) {
+                a {
+                  padding: 16px 15px;
+                }
+              }
+
+              a:hover {
+                background-color: #222222;
+                background-image: none;
+                color: @white;      
+              }
+            }
+          }
+        }
+
+        @media (max-width: 767px) { 
+          li {
+            a {
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+
+      p.phone {
+        margin-top: 27.5px;
+        line-height: 1.42857;
+        color: #1241e6;
+        text-shadow: 0 0 .12em  #000000; 
       }
     }
   }
@@ -23,67 +91,16 @@ body {
 
     .container {
       max-width: none;
+    
+      .row {
+        .well.well-principles{
+          margin: 15px 0px;
+          min-height: 265px;
+        }
+      }
     }
   }
 }
-p.phone {
-  margin-top: 27.5px;
-  line-height: 1.42857;
-  color: #1241e6;
-  text-shadow: 0 0 .12em  #000000; 
-}
-.spacing {
-margin: 0px 10px;
-}
-.navbar-collapse {
-line-height: 0px;
-text-align: center;
-}
-.navbar-nav {
-float: none;
-display: inline-block;
-}
-.navbar-nav > li > a {
-  padding: 32.5px 15px;
-}
-@media (max-width: 767px) { 
-  .navbar-nav > li > a {
-    padding: 10px 15px;
-  }
-}
-button.navbar-toggle {
-  top: 18px;
-}
-.dropdown-menu {
-	font-size: 19px;
-}
-.dropdown-menu {
-  back
-  & > li {
-    & > a {
-      color: #999999;
-    }
-  }
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-background-color: #222222;
-background-image: none;
-}
-.well-principles{
-  margin: 15px 0px;
-  min-height: 265px;
-}
-/*.navbar-inverse .navbar-nav > li > a {
-color: #bbbbbb;
-}
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-background-color: #222222;
-}
-.navbar-inverse {
-background-color: #444444;
-}*/
-
 
 // Sticky Footer
 html, body {
@@ -104,7 +121,7 @@ html, body {
 footer {
 	margin-top: 40px;
 	padding: 32px 0px;
-	background: #f0f0f0;
+	background: #222;
 }
 // End Sticky Footer
 
