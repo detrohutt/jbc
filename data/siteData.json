@@ -3,7 +3,9 @@
     "title": "Just Better Computers"
   },
   "pageData": {
-    "index": {},
-    "services": {}
+    "index": {"activePage": "index"},
+    "services": {"activePage": "services"},
+    "testimonials": {"activePage": "testimonials"},
+    "giving-back": {"activePage": "giving-back"}
   }
 }

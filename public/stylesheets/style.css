@@ -7422,11 +7422,22 @@ body .navbar .navbar-collapse .navbar-nav {
   float: none;
   display: inline-block;
 }
+body .navbar .navbar-collapse .navbar-nav .open a {
+  background-color: #222222;
+}
 body .navbar .navbar-collapse .navbar-nav li a {
   padding: 32.5px 15px;
 }
+body .navbar .navbar-collapse .navbar-nav li a:focus {
+  color: #999999;
+}
+body .navbar .navbar-collapse .navbar-nav li a:hover {
+  color: #fdfdfd;
+}
 body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu {
   font-size: 19px;
+  border: 0px;
+  box-shadow: none;
 }
 body .navbar .navbar-collapse .navbar-nav li ul.dropdown-menu li a {
   color: #999999;

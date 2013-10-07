@@ -38,15 +38,32 @@ body {
       .navbar-nav {
         float: none;
         display: inline-block;
+
+        .open {
+
+          a {
+            background-color: #222222;
+          }
+        }
       
         li {
           a {
             padding: 32.5px 15px;
           }
 
+          a:focus {
+            color: #999999;
+          }
+
+          a:hover {
+            color: @white
+          }
+
           ul.dropdown-menu {
             font-size: 19px;
-
+            border: 0px;
+            box-shadow: none;
+            
             li {
               a {
                 color: #999999;
