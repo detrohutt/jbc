@@ -20,6 +20,7 @@ html.no-js
     script(src='/javascripts/jquery/jquery.js')
     script(src='/javascripts/bootstrap/bootstrap.js')
     script(src='/javascripts/modernizr/modernizr.js')
+    script(src='/javascripts/jquery/slidingdropdown.js')
   body
     //if lt IE 7
       p.browsehappy
@@ -43,7 +44,7 @@ html.no-js
           li
             a(href='/services') Services/Pricing
           li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
+            a.dropdown-toggle(href='#')
               | Community
               b.caret
             ul.dropdown-menu.navbar-inverse
