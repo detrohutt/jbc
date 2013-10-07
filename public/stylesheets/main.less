@@ -44,7 +44,13 @@ body {
           a {
             background-color: #222222;
             color: #999999;
+
+            .caret {
+              border-top-color: #999999;
+              border-bottom-color: #999999;
+            }
           }
+
           ul.dropdown-menu {
             display: none;
           }
@@ -57,10 +63,20 @@ body {
 
           a:focus {
             color: #999999;
+
+            .caret {
+              border-top-color: #999999;
+              border-bottom-color: #999999;
+            }
           }
 
           a:hover {
-            color: @white
+            color: @white;
+
+            .caret {
+              border-top-color: @white;
+              border-bottom-color: @white;
+            }
           }
 
           ul.dropdown-menu {
