@@ -1,7 +1,7 @@
 //variables
 @lighterGrey: lighten(@grey, 8%);
 @lightGrey: lighten(@grey, 5%);
-@grey: #999;
+@grey: #999999;
 @darkGrey: darken(@grey, 5%);
 @darkerGrey: darken(@grey, 8%);
 
@@ -43,16 +43,12 @@ body {
 
           a {
             background-color: #222222;
-            color: #999999;
+            color: @grey;
 
             .caret {
-              border-top-color: #999999;
-              border-bottom-color: #999999;
+              border-top-color: @grey;
+              border-bottom-color: @grey;
             }
-          }
-
-          ul.dropdown-menu {
-            display: none;
           }
         }
       
@@ -62,11 +58,11 @@ body {
           }
 
           a:focus {
-            color: #999999;
+            color: @grey;
 
             .caret {
-              border-top-color: #999999;
-              border-bottom-color: #999999;
+              border-top-color: @grey;
+              border-bottom-color: @grey;
             }
           }
 
@@ -83,10 +79,28 @@ body {
             font-size: 19px;
             border: 0px;
             box-shadow: none;
+            display: none;
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+
+            > li > a,
+            .dropdown-header {
+              padding: 5px 15px 5px 25px;
+            }
+            > li > a {
+              line-height: @line-height-computed;
+              &:hover,
+              &:focus {
+                background-image: none;
+              }
+            }
 
             li {
               a {
-                color: #999999;
+                color: @grey;
               }
               @media (min-width: 768px) {
                 a {
