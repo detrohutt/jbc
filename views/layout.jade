@@ -1,3 +1,10 @@
+mixin ifActive(checkThis)
+  if activePage == checkThis
+    li.active
+      a(href='/' + checkThis) #{linkDesc}
+  else
+    li
+      a(href='/' + checkThis) #{linkDesc}
 doctype
 //if lt IE 7
   <html class="no-js lt-ie9 lt-ie8 lt-ie7">
@@ -39,18 +46,8 @@ html.no-js
           img.img-responsive(src='/images/jbc_logo.png')
       .navbar-collapse.collapse.main-nav
         ul.nav.navbar-nav
-          if activePage == "index"
-            li.active
-              a(href='/index') About Us
-          else
-            li
-              a(href='/index') About Us
-          if activePage == "services"
-            li.active
-              a(href='/services') Services/Pricing
-          else
-            li
-              a(href='/services') Services/Pricing
+          +ifActive("index")
+          +ifActive("services")
           li.dropdown.open
             a.dropdown-toggle(href='#')
               | Community

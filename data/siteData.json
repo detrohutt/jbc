@@ -3,9 +3,21 @@
     "title": "Just Better Computers"
   },
   "pageData": {
-    "index": {"activePage": "index"},
-    "services": {"activePage": "services"},
-    "testimonials": {"activePage": "testimonials"},
-    "giving-back": {"activePage": "giving-back"}
+    "index": {
+        "activePage": "index",
+        "linkDesc": "About Us"
+        },
+    "services": {
+        "activePage": "services",
+        "linkDesc": "Services/Pricing"
+        },
+    "testimonials": {
+        "activePage": "testimonials",
+        "linkDesc": "Testimonials"
+        },
+    "giving-back": {
+        "activePage": "giving-back",
+        "linkDesc": "Giving Back"
+    }
   }
 }
