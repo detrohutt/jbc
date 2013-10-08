@@ -1,0 +1,2 @@
+#!/bin/bash
+chown -R detrohuttssh:users /home/detrohuttssh/.git/objects/*
