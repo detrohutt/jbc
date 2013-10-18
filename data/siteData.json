@@ -1,6 +1,7 @@
 {
   "globalData": {
-    "title": "Just Better Computers"
+    "title": "Just Better Computers",
+    "activeClass": "active"
   },
   "pageData": {
     "index": {
