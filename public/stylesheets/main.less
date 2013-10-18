@@ -75,31 +75,41 @@ body {
             }
           }
 
+          @media (max-width: @screen-xs-max) {
+              // Dropdowns get custom display when collapsed
+              ul.dropdown-menu {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+                > li > a,
+                .dropdown-header {
+                  padding: 5px 15px 5px 25px;
+                }
+                > li > a {
+                  line-height: @line-height-computed;
+                  &:hover,
+                  &:focus {
+                    background-image: none;
+                  }
+                }
+              }
+            }
           ul.dropdown-menu {
             font-size: 19px;
             border: 0px;
             box-shadow: none;
             display: none;
-            position: static;
-            float: none;
-            width: auto;
-            margin-top: 0;
-            background-color: transparent;
           
 
             li {
-              a, .dropdown-header {
-                padding: 5px 15px 5px 25px;
-              }
-
               a {
                 color:  @grey;
-                line-height: @line-height-computed;
-                &:hover,
-                &:focus {
-                background-image: none;
-                }
               }
+
               @media (min-width: 768px) {
                 a {
                   padding: 10px 15px;
