@@ -8,6 +8,64 @@
         "linkDesc": "About Us"
         },
     "services": {
+        "serviceList": [
+            {
+                "name": "Diagnostic"
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+            {
+                "name": ""
+                "description": ""
+            },
+        ],
         "activePage": "services",
         "linkDesc": "Services/Pricing"
         },
