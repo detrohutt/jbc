@@ -4,6 +4,7 @@
 @grey: #999999;
 @darkGrey: darken(@grey, 5%);
 @darkerGrey: darken(@grey, 8%);
+@black: #080808;
 
 @white: #fdfdfd;
 
@@ -41,7 +42,7 @@ body {
 
         .open {
 
-          a {
+          > a {
             background-color: #222222;
             color: @grey;
 
@@ -49,6 +50,12 @@ body {
               border-top-color: @grey;
               border-bottom-color: @grey;
             }
+          }
+        }
+        .open.active {
+
+          > a {
+            background-color: @black;
           }
         }
       
@@ -76,28 +83,28 @@ body {
           }
 
           @media (max-width: @screen-xs-max) {
-              // Dropdowns get custom display when collapsed
-              ul.dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-                > li > a,
-                .dropdown-header {
-                  padding: 5px 15px 5px 25px;
-                }
-                > li > a {
-                  line-height: @line-height-computed;
-                  &:hover,
-                  &:focus {
-                    background-image: none;
-                  }
+            // Dropdowns get custom display when collapsed
+            ul.dropdown-menu {
+              position: static;
+              float: none;
+              width: auto;
+              margin-top: 0;
+              background-color: transparent;
+              border: 0;
+              box-shadow: none;
+              > li > a,
+              .dropdown-header {
+                padding: 5px 15px 5px 25px;
+              }
+              > li > a {
+                line-height: @line-height-computed;
+                &:hover,
+                &:focus {
+                  background-image: none;
                 }
               }
             }
+          }
           ul.dropdown-menu {
             font-size: 19px;
             border: 0px;
@@ -107,6 +114,8 @@ body {
 
             li {
               a {
+                background-color: #222222;
+                background-image: none;
                 color:  @grey;
               }
 
@@ -117,8 +126,6 @@ body {
               }
 
               a:hover {
-                background-color: #222222;
-                background-image: none;
                 color: @white;      
               }
             }
@@ -138,6 +145,7 @@ body {
         margin-top: 27.5px;
         line-height: 1.42857;
         color: #1241e6;
+        font-size: 24px;
         text-shadow: 0 0 .12em  #000000; 
       }
     }
