@@ -50,17 +50,17 @@ html.no-js
             a(href='/') About Us
           li(class=services)
             a(href='/services') Services/Pricing
-          li.dropdown
+          li.dropdown(class=[news, testimonials, givingBack])
             a.dropdown-toggle(href='#')
               | Community
               b.caret
             ul.dropdown-menu.navbar-inverse
               li(class=news)
-                a(href='#') News
+                a(href='/news') News
               li(class=testimonials)
-                a(href='#') Testimonials
-              li(class=charity)
-                a(href='#') Charity Log
+                a(href='testimonials') Testimonials
+              li(class=givingBack)
+                a(href='giving-back') Giving Back
         p.phone.pull-right.visible-lg 478-451-7249
 
 
