@@ -46,18 +46,20 @@ html.no-js
           img.img-responsive(src='/images/jbc_logo.png')
       .navbar-collapse.collapse.main-nav
         ul.nav.navbar-nav
-          +ifActive("index")
-          +ifActive("services")
+          li(class=index)
+            a(href='/') About Us
+          li(class=services)
+            a(href='/services') Services/Pricing
           li.dropdown
             a.dropdown-toggle(href='#')
               | Community
               b.caret
             ul.dropdown-menu.navbar-inverse
-              li
+              li(class=news)
                 a(href='#') News
-              li
+              li(class=testimonials)
                 a(href='#') Testimonials
-              li
+              li(class=charity)
                 a(href='#') Charity Log
         p.phone.pull-right.visible-lg 478-451-7249
 
