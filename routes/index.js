@@ -4,6 +4,13 @@
 var merge = require('merge'),
     fs = require('fs');
 
+// Returns a camel cased version of input
+var camelCase = function camelCase(input) {
+    return input.toLowerCase().replace(/-(.)/g, function(match, group1) {
+        return group1.toUpperCase();
+    });
+};
+
 // Router function that gets exported to the main(app.js) loop.
 exports.router = function(req, res, next){
   // Strip leading slashes, .stuff's and lower casing the string.
@@ -31,10 +38,18 @@ exports.router = function(req, res, next){
 
 // Data routing function.
 var dataRouter = function dataRouter(page) {
+  // Set pageName to the actual jade page requested, camelCased
+  var pageArray = page.split('/'),
+  pageName = camelCase(pageArray[pageArray.length - 1]),
   // Fetch most recent siteData
-  var siteData = fetchJSON(__dirname + '/../data/siteData.json');
-  // Merge the global and page data together, then return it.
-  return merge(siteData.globalData, siteData.pageData[page]);
+  siteData = fetchJSON(__dirname + '/../data/siteData.json'),
+  // Merge the global and page data together.
+  pageData = merge(siteData.globalData, siteData.pageData[page]);
+  // Set the pageName variable to activeClass. Can be used for classes
+  pageData[pageName] = pageData.activeClass;
+
+  // Return the processed pageData
+  return pageData;
 };
 
 // Fetch JSON data function
