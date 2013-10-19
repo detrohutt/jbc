@@ -4,12 +4,14 @@
 var merge = require('merge'),
     fs = require('fs');
 
-// Returns a camel cased version of input
-var camelCase = function camelCase(input) {
-    return input.toLowerCase().replace(/-(.)/g, function(match, group1) {
-        return group1.toUpperCase();
-    });
-};
+// string.toCamelCase()
+if (!String.prototype.toCamelCase) {
+  String.prototype.toCamelCase = function toCamelCase() { 
+    return this.toLowerCase().replace(/(\-[a-zA-Z])/g, function($1) {
+        return $1.toUpperCase().replace('-','');
+    })
+  };
+}
 
 // Router function that gets exported to the main(app.js) loop.
 exports.router = function(req, res, next){
@@ -40,9 +42,10 @@ exports.router = function(req, res, next){
 var dataRouter = function dataRouter(page) {
   // Set pageName to the actual jade page requested, camelCased
   var pageArray = page.split('/'),
-  pageName = camelCase(pageArray[pageArray.length - 1]),
+  pageName = pageArray[pageArray.length - 1].toCamelCase();
+  console.log(pageName);
   // Fetch most recent siteData
-  siteData = fetchJSON(__dirname + '/../data/siteData.json'),
+  var siteData = fetchJSON(__dirname + '/../data/siteData.json'),
   // Merge the global and page data together.
   pageData = merge(siteData.globalData, siteData.pageData[page]);
   // Set the pageName variable to activeClass. Can be used for classes
