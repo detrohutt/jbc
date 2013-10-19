@@ -10,6 +10,12 @@ block content
               a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapse'+i)
                 = serviceList[i].name
           div(id='collapse'+i).panel-collapse.collapse
-            .panel-body
-              = serviceList[i].description
+            - if (typeof serviceList[i].description === 'string') {
+              .panel-body
+                 = serviceList[i].description
+            - } else {
+              ul
+                each item in serviceList[i].description
+                  li= item
+            - }
           

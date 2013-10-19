@@ -18,7 +18,7 @@
             },
             {
                 "name": "Virus Removal",
-                "description": "vr"
+                "description": ["vr", "vra", "vrb"]
             },
             {
                 "name": "PC Tuneup",
