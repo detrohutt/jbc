@@ -67,10 +67,11 @@
         ]
     },
     "testimonials": {
-        "community": "active"
     },
     "givingBack": {
-        "community": "active"     
+    },
+    "news": {
+
     }
   }
 }
