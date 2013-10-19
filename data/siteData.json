@@ -5,78 +5,72 @@
   },
   "pageData": {
     "index": {
-        "activePage": "index",
-        "linkDesc": "About Us"
-        },
+    },
     "services": {
         "serviceList": [
             {
-                "name": "Diagnostic"
-                "description": ""
+                "name": "Diagnostic Service",
+                "description": "ds"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Phone Repairs",
+                "description": "pr"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Virus Removal",
+                "description": "vr"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "PC Tuneup",
+                "description": "pt"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "New PC Setup",
+                "description": "nps"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Operating System Install/Upgrade",
+                "description": "osiu"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Printer Setup/Troubleshooting",
+                "description": "pst"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Email Setup/Troubleshooting",
+                "description": "est"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Hardware Replacement/Troubleshooting",
+                "description": "hrt"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Hardware Upgrades",
+                "description": "hu"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Wireless Network Setup/Troubleshooting",
+                "description": "wnst"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Data Backup/Transfer",
+                "description": "dbt"
             },
             {
-                "name": ""
-                "description": ""
+                "name": "Data Recovery",
+                "description": "dr"
             },
             {
-                "name": ""
-                "description": ""
-            },
-        ],
-        "activePage": "services",
-        "linkDesc": "Services/Pricing"
-        },
+                "name": "Personalized Training",
+                "description": "pt"
+            }
+        ]
+    },
     "testimonials": {
-        "activePage": "testimonials",
-        "linkDesc": "Testimonials"
-        },
-    "giving-back": {
-        "activePage": "giving-back",
-        "linkDesc": "Giving Back"
+        "community": "active"
+    },
+    "givingBack": {
+        "community": "active"     
     }
   }
 }
