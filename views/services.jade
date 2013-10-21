@@ -12,10 +12,24 @@ block content
           div(id='collapse'+i).panel-collapse.collapse
             - if (typeof serviceList[i].description === 'string') {
               .panel-body
-                 = serviceList[i].description
-            - } else {
-              ul
-                each item in serviceList[i].description
-                  li= item
+                h4= serviceList[i].description
+            - } else if (typeof serviceList[i].description === 'object') {
+              .panel-body
+                - if (typeof serviceList[i].description.summary !== 'undefined') {
+                  h4= serviceList[i].description.summary
+                  br
+                - }
+                - if (typeof serviceList[i].description.summary !== 'undefined') {
+                  h4
+                    | Service Overview:
+                  ul
+                    each item in serviceList[i].description.list
+                      li= item
+                - }
+                - if (typeof serviceList[i].description.note !== 'undefined') {
+                  br
+                  .note
+                    = "*Note: " + serviceList[i].description.note
+                - }
             - }
           
