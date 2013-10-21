@@ -16,7 +16,7 @@
                 }
             },
             {
-                "name": "Phone/Tablet Repairs",
+                "name": "Phone & Tablet Repairs",
                 "description": {
                     "summary": "If you've got a cracked/shattered screen, broken camera or speaker, battery that won't hold a charge, or just about any other problem with your phone or tablet, I've got some good news. There's no need to replace the whole device. We can fix most problems on most makes and models of phones and tablets for much less than the cost of replacement. We will beat any advertised price on phone and tablet repairs. Give us a call today!"
                 }
@@ -43,7 +43,7 @@
                 }
             },
             {
-                "name": "Operating System Install/Upgrade",
+                "name": "Operating System Install & Upgrade",
                 "description": {
                     "summary": "Have you purchased a used computer with someone else's data on it? Has yours become too cluttered over the years? Want to try out the newest version of Windows on your existing computer? Whatever the reason, sometimes you need to start over with the same or a new operating system, and we've got you covered.",
                     "list": ["Help you purchase software disc or product key if needed", "Back up all important data(if applicable)", "Perform a clean install of existing operating system or upgrade to newer operating system*", "Perform all steps included in our New PC Setup service"],
@@ -51,19 +51,19 @@
                 }
             }, 
             {
-                "name": "Printer Setup/Troubleshooting",
+                "name": "Printer Setup & Troubleshooting",
                 "description": {
                     "summary": "pst"
                 }
             },
             {
-                "name": "Email Setup/Troubleshooting",
+                "name": "Email Setup & Troubleshooting",
                 "description": {
                     "summary": "pst"
                 }
             },
             {
-                "name": "Hardware Replacement/Troubleshooting",
+                "name": "Hardware Replacement & Troubleshooting",
                 "description": {
                     "summary": "pst"
                 }
@@ -75,13 +75,13 @@
                 }
             },
             {
-                "name": "Wireless Network Setup/Troubleshooting",
+                "name": "Wireless Network Setup & Troubleshooting",
                 "description": {
                     "summary": "pst"
                 }
             },
             {
-                "name": "Data Backup/Transfer",
+                "name": "Data Backup & Transfer",
                 "description": {
                     "summary": "pst"
                 }            
