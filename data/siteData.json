@@ -10,59 +10,93 @@
         "serviceList": [
             {
                 "name": "Diagnostic Service",
-                "description": "ds"
+                "description": {
+                    "summary": "A Diagnostic Service is only charged if we determine the problem but you decide not to have it fixed or you decide to fix it yourself.",
+                    "list": ["Use various tools, equipment, and tests to determine the most likely cause of the problem", "Explain our findings to you, including how certain we are that we've correctly identified the problem and what parts you need if any, and answer any questions you have", "Help you locate and purchase any needed parts, if requested"]
+                }
             },
             {
-                "name": "Phone Repairs",
-                "description": "pr"
+                "name": "Phone/Tablet Repairs",
+                "description": {
+                    "summary": "If you've got a cracked/shattered screen, broken camera or speaker, battery that won't hold a charge, or just about any other problem with your phone or tablet, I've got some good news. There's no need to replace the whole device. We can fix most problems on most makes and models of phones and tablets for much less than the cost of replacement. We will beat any advertised price on phone and tablet repairs. Give us a call today!"
+                }
             },
             {
                 "name": "Virus Removal",
-                "description": ["vr", "vra", "vrb"]
+                "description": {
+                    "summary": "A virus infection can stop your computer dead in its tracks. We can help you get back to work or play quickly.",
+                    "list": ["Remove the infection and ensure normal functionality of the computer", "Peform all steps included in our PC Tuneup", "In a few extreme cases - Back up all important files, format the hard drive, reinstall the operating system, perform a New PC Setup, and restore the backed up files"]
+                }
             },
             {
                 "name": "PC Tuneup",
-                "description": "pt"
+                "description": {
+                    "summary": "When your computer isn't running at its best, you can waste hours of your life just staring at the screen, waiting. Don't! Let us get your computer healthy and happy again so it can make your life easier instead of slowing you down.",
+                    "list": ["Uninstall unwanted programs and browser add-ons/toolbars from the computer", "Install all available updates for Windows Update, any installed security software, Adobe Reader, Adobe Flash Player, and Java", "Remove unneeded temporary files to free up space", "Detect and repair any registry errors", "Optimize system startup and shutdown by disabling unneeded programs from starting automatically", "Install free antivirus software if needed", "Defragment the hard drive if needed"]
+                }
             },
             {
                 "name": "New PC Setup",
-                "description": "nps"
+                "description": {
+                    "summary": "If you've just purchased your first computer, aren't sure what all you need to get up and running, or just have more important things to do, we can set everything up for you quickly and ensure you've got everything you need to make the most of your computing experience.",
+                    "list": ["Unbox all components and set them up in the desired space, ensuring that everything is connected correctly", "Complete first-time setup including creating user accounts, setting time and date, registering the product, and activating trial software if desired", "Uninstall unwanted trialware or other programs", "Install free antivirus software", "Create a new email address or set up an existing email address to work on the new PC.", "Install all software needed for enjoying web content such as videos, games, and PDF files", "Install a free office and productivity suite if desired", "Install and configure neccessary drivers for all internal and external devices", "Connect and set up a new or existing printer or other peripheral device", "Transfer data from previous computer if applicable"]
+                }
             },
             {
                 "name": "Operating System Install/Upgrade",
-                "description": "osiu"
-            },
+                "description": {
+                    "summary": "Have you purchased a used computer with someone else's data on it? Has yours become too cluttered over the years? Want to try out the newest version of Windows on your existing computer? Whatever the reason, sometimes you need to start over with the same or a new operating system, and we've got you covered.",
+                    "list": ["Help you purchase software disc or product key if needed", "Back up all important data(if applicable)", "Perform a clean install of existing operating system or upgrade to newer operating system", "Includes all steps from our New PC Setup service"],
+                    "note": "We can provide discs in most cases as long as you have a valid product key"
+                }
+            }, 
             {
                 "name": "Printer Setup/Troubleshooting",
-                "description": "pst"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Email Setup/Troubleshooting",
-                "description": "est"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Hardware Replacement/Troubleshooting",
-                "description": "hrt"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Hardware Upgrades",
-                "description": "hu"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Wireless Network Setup/Troubleshooting",
-                "description": "wnst"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Data Backup/Transfer",
-                "description": "dbt"
+                "description": {
+                    "summary": "pst"
+                }            
             },
             {
                 "name": "Data Recovery",
-                "description": "dr"
+                "description": {
+                    "summary": "pst"
+                }
             },
             {
                 "name": "Personalized Training",
-                "description": "pt"
+                "description": {
+                    "summary": "pst"
+                }
             }
         ]
     },
