@@ -11,7 +11,7 @@
 @white: #fdfdfd;
 
 body {
-  padding-top: 50px;
+  padding-top: 110px;
 
   .navbar {
     font-family: gputeks;
@@ -173,8 +173,7 @@ body {
 
   #wrap {
     .text-center;
-    padding: 40px 15px;
-    margin: 15px;
+    padding: 0px 15px;
 
     .container {
       max-width: none;
@@ -184,7 +183,7 @@ body {
         font-weight: bold;
       }
 
-      #accordion.panel-group{
+      #accordion.panel-group {
         text-align: left;
 
         .panel-title {
@@ -201,9 +200,18 @@ body {
       }
     
       .row {
-        .well.well-principles{
+        .well.well-principles {
           margin: 15px 0px;
+          padding-top: 0px;
           min-height: 265px;
+
+          @media (max-width: 767px) {
+            min-height: 0px;
+          }
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            min-height: 230px;
+          }
         }
       }
     }
