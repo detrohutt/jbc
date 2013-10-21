@@ -25,7 +25,7 @@
                 "name": "Virus Removal",
                 "description": {
                     "summary": "A virus infection can stop your computer dead in its tracks. We can help you get back to work or play quickly.",
-                    "list": ["Remove the infection and ensure normal functionality of the computer", "Peform all steps included in our PC Tuneup", "In a few extreme cases - Back up all important files, format the hard drive, reinstall the operating system, perform a New PC Setup, and restore the backed up files"]
+                    "list": ["Remove the infection and ensure normal functionality of the computer", "Peform all steps included in our PC Tuneup service", "In a few extreme cases - Back up all important files, format the hard drive, reinstall the operating system, perform a New PC Setup, and restore the backed up files"]
                 }
             },
             {
@@ -46,7 +46,7 @@
                 "name": "Operating System Install/Upgrade",
                 "description": {
                     "summary": "Have you purchased a used computer with someone else's data on it? Has yours become too cluttered over the years? Want to try out the newest version of Windows on your existing computer? Whatever the reason, sometimes you need to start over with the same or a new operating system, and we've got you covered.",
-                    "list": ["Help you purchase software disc or product key if needed", "Back up all important data(if applicable)", "Perform a clean install of existing operating system or upgrade to newer operating system", "Includes all steps from our New PC Setup service"],
+                    "list": ["Help you purchase software disc or product key if needed", "Back up all important data(if applicable)", "Perform a clean install of existing operating system or upgrade to newer operating system*", "Perform all steps included in our New PC Setup service"],
                     "note": "We can provide discs in most cases as long as you have a valid product key"
                 }
             }, 
