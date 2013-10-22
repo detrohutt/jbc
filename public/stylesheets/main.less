@@ -11,15 +11,15 @@
 @white: #fdfdfd;
 
 body {
-  padding-top: 110px;
+  padding-top: 100px;
 
   .navbar {
     font-family: gputeks;
-    font-size: 21px;
+    font-size: 19px;
 
     .navbar-header {
       button.navbar-toggle {
-        top: 18px;
+        //top: 9px;
       }
 
       .navbar-brand {
@@ -27,7 +27,7 @@ body {
         margin-left: 8px;
 
         & > img {
-          max-width: 160px;
+          max-height: 59px;
           display: inline-block;
         }
       }
@@ -75,7 +75,7 @@ body {
       
         li {
           a {
-            padding: 32.5px 15px;
+            padding: 25px 12px;
           }
 
           a:focus {
@@ -102,13 +102,13 @@ body {
               position: static;
               float: none;
               width: auto;
-              margin-top: 0;
+              margin-top: -10px;
               background-color: transparent;
               border: 0;
               box-shadow: none;
               > li > a,
               .dropdown-header {
-                padding: 5px 15px 5px 25px;
+                padding: 5px 15px 5px 15px;
               }
               > li > a {
                 line-height: @line-height-computed;
@@ -121,7 +121,8 @@ body {
           }
 
           ul.dropdown-menu {
-            font-size: 19px;
+            min-width: 154px;
+            font-size: 17px;
             border: 0px;
             box-shadow: none;
             display: none;
@@ -131,6 +132,7 @@ body {
 
               &.active > a {
                 background-color: @black;
+                color: @white;
               }
               
               a {
@@ -160,21 +162,30 @@ body {
           }
         }
       }
-
-      p.phone {
-        margin-top: 27.5px;
+    }
+    
+    p.menu-label{
+      position: absolute;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      bottom: -3px;
+      right: 16px;
+    }
+    p.phone {
+        margin-top: 20px;
         line-height: 1.42857;
         color: #1241e6;
-        font-size: 24px;
+        font-size: 22px;
+        text-align: center;
         text-shadow: 0 0 .12em  #000000; 
-      }
     }
   }
 
   #wrap {
     .text-center;
     padding: 0px 15px;
-
+    max-width: 1200px;
+    
     .container {
       max-width: none;
 
@@ -211,6 +222,14 @@ body {
 
           @media (min-width: 768px) and (max-width: 991px) {
             min-height: 230px;
+          }
+
+          @media (min-width: 1048px) and (max-width: 1184px) {
+            min-height: 247px;
+          }
+
+          @media (min-width: 1185px) {
+            min-height: 207px;
           }
         }
       }
