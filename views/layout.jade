@@ -40,15 +40,14 @@ html.no-js
         div
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
             span.sr-only Toggle navigation
-            //span.icon-bar
-            //span.icon-bar
-            //span.icon-bar
             | Menu
           //p.menu-label.visible-xs Menu
         a.navbar-brand(href='/index')
           img.img-responsive.visible-lg.visible-md(src='/images/jbc_logo.png')
           img.img-responsive.hidden-lg.hidden-md(src='/images/jbc_logo_letters.png')
-        p.phone.visible-xs 478-451-7249
+        p.phone.visible-xs 
+          a(href='tel:4784517249')
+            = phoneNumber
       .navbar-collapse.collapse.main-nav
         ul.nav.navbar-nav
           li(class=index)
