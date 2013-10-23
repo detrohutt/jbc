@@ -16,10 +16,23 @@ body {
   .navbar {
     font-family: gputeks;
     font-size: 19px;
+    text-align: center;
 
     .navbar-header {
       button.navbar-toggle {
         //top: 9px;
+      }
+
+      .navbar-toggle {
+        font-size: 23px;
+        border-color: @grey;
+        color: @grey;
+
+        .icon-bar {
+          background-color: @white;
+          width: auto;
+          margin: 3px 5px;
+        }
       }
 
       .navbar-brand {
@@ -35,7 +48,6 @@ body {
 
     .navbar-collapse {
       line-height: 0px;
-      text-align: center;
       padding: 0px 8px;
 
       .navbar-nav {
