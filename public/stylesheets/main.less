@@ -10,13 +10,18 @@
 
 @white: #f9f9f9;
 
+@bgImg: '/images/grey_wash_wall.png';
+
 body {
   padding-top: 80px;
 
-  .navbar {
+  .navbar, .navbar-inverse {
     font-family: gputeks;
     font-size: 19px;
     text-align: center;
+    background-image: url(@bgImg);
+    background-repeat: repeat-x;
+    background-color: transparent;
 
     a, a:hover, a:active, a:focus {
       text-decoration: none;
@@ -30,7 +35,6 @@ body {
         box-shadow: 0 0 4px 1px rgba(255,255,255, 0.5) inset, 0 0 2px 1px rgba(0,0,0, 0.8);
         font-size: 17px;
         border-color: @white;
-        background-color: @darkerGrey;
         color: @white;
         margin-top: 6px;
         margin-right: 10px;
@@ -58,7 +62,8 @@ body {
 
         .active {
           
-          > a, &.open > a {
+          > a, > a:focus, &.open > a {
+            background-color: rgba(8, 8, 8, 0.6);
             color: @white;
 
             .caret {
@@ -70,8 +75,17 @@ body {
 
         .open {
 
+          .dropdown-toggle {
+            color: @white;
+
+            .caret {
+              border-top-color: @white;
+              border-bottom-color: @white; 
+            }
+          }
+
           > a {
-            background-color: #222222;
+            background-color: transparent;
             color: @grey;
 
             .caret {
@@ -79,11 +93,15 @@ body {
               border-bottom-color: @grey;
             }
           }
+
+          > a:focus {
+            background-color: transparent;
+          }
         }
         .open.active {
 
           > a {
-            background-color: @black;
+            background-color: rgba(8, 8, 8, 0.6);
           }
         }
       
@@ -116,21 +134,17 @@ body {
               position: static;
               float: none;
               width: auto;
-              margin-top: -10px;
+              margin-top: -5px;
               background-color: transparent;
               border: 0;
               box-shadow: none;
               
               > li > a,
               .dropdown-header {
-                padding: 5px 15px 5px 15px;
+                padding: 3px 15px;
               }
               > li > a {
                 line-height: @line-height-computed;
-                &:hover,
-                &:focus {
-                  background-image: none;
-                }
               }
             }
           }
@@ -138,6 +152,8 @@ body {
           ul.dropdown-menu {
             min-width: 154px;
             font-size: 17px;
+            background-image: url(@bgImg);
+            background-repeat: repeat-x;
             border: 0px;
             box-shadow: none;
             display: none;
@@ -145,14 +161,13 @@ body {
 
             li {
 
-              &.active > a {
-                background-color: @black;
+              &.active > a, &.active > a:hover {
+                background-color: rgba(8, 8, 8, 0.6);
                 color: @white;
               }
               
-              a {
-                background-color: #222222;
-                background-image: none;
+              a, a:hover {
+                background-color: transparent;
                 color:  @grey;
               }
 
@@ -172,7 +187,7 @@ body {
         @media (max-width: 767px) { 
           li {
             a {
-              padding: 10px 15px;
+              padding: 7px 15px;
             }
           }
         }
@@ -194,11 +209,17 @@ body {
     max-width: 1200px;
     
     .container {
-      max-width: none;
-
       .note {
         color: @red;
         font-weight: bold;
+      }
+
+      table {
+        text-align: left;
+      }
+
+      .panel-title {
+        font-size: 30px;
       }
 
       #accordion.panel-group {
@@ -262,9 +283,9 @@ html, body {
 
 footer {
 	margin-top: 40px;
-	padding: 32px 0px;
-	background: #222;
-}
+  padding: 32px 0px;
+  background-image: url(@bgImg);
+  background-repeat: repeat-x;}
 // End Sticky Footer
 
 
