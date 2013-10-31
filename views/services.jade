@@ -1,31 +1,60 @@
+mixin makeTables
+  each val, index in pricingTables
+    h3= pricingTables[index].label
+    table.table.table-striped.table-responsive
+      thead
+        tr
+          each val in pricingTables[index].headings
+            th= val
+      tbody
+        each val, index2 in pricingTables[index].body
+          tr
+            each val in pricingTables[index].body[index2].rowData
+              td= val
 extends layout
 
 block content
   .container
     .row
-      #accordion.panel-group
-        - for (var i = 0; i < serviceList.length; i++)
-          .panel.panel-default
-            .panel-heading
-              h4.panel-title
-                a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapse'+i)
-                  = serviceList[i].name
-            div(id='collapse'+i).panel-collapse.collapse
-              .panel-body
-                - if (typeof serviceList[i].description.summary !== 'undefined') {
-                  h4= serviceList[i].description.summary
-                  br
-                - }
-                - if (typeof serviceList[i].description.list !== 'undefined') {
-                  h4
-                    | Service Overview:
-                  ul
-                    each item in serviceList[i].description.list
-                      li= item
-                - }
-                - if (typeof serviceList[i].description.note !== 'undefined') {
-                  br
-                  .note
-                    = "*Note: " + serviceList[i].description.note
-                - }
-          
+      .col-xs-12.col-sm-4.col-md-4.col-lg-4
+        .panel.panel-success
+          .panel-heading
+            h2.panel-title Pricing
+          .panel-body
+            +makeTables()
+            h3
+              | Parts
+            br
+            | Parts are never marked up. You pay what we pay. You may optionally pay $4 extra for 1-day shipping on select parts.
+      .col-xs-12.col-sm-8.col-md-8.col-lg-8
+        .well
+          h2
+            | Services we offer:
+          h3
+            | Click an item for more info
+        #accordion.panel-group
+          - for (var i = 0; i < serviceList.length; i++)
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapse'+i)
+                    = serviceList[i].name
+              div(id='collapse'+i).panel-collapse.collapse
+                .panel-body
+                  - if (typeof serviceList[i].description.summary !== 'undefined') {
+                    h4= serviceList[i].description.summary
+                    br
+                  - }
+                  - if (typeof serviceList[i].description.list !== 'undefined') {
+                    h4
+                      | Service Overview:
+                    ul
+                      each item in serviceList[i].description.list
+                        li= item
+                  - }
+                  - if (typeof serviceList[i].description.note !== 'undefined') {
+                    br
+                    .note
+                      = "*Note: " + serviceList[i].description.note
+                  - }
+            

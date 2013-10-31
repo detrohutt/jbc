@@ -6,6 +6,17 @@
   },
   "pageData": {
     "index": {
+        "comparisonTable": {
+            "headings": ["Compare", "Them", "Us"],
+            "body": [
+                {
+                    "rowData": ["Business Hours", "Weekdays until 5PM", "Every day until 9PM"]
+                },
+                {
+                    "rowData": ["Price(labor)", "$75+ per hour with no limit", "$95 or less"]
+                }
+            ]
+        }
     },
     "services": {
         "serviceList": [
@@ -109,6 +120,53 @@
                 "description": {
                     "summary": "Don't see what you're looking for in our services list? There's still a good chance we can help. Just give us a call and tell us what you need."
                 }
+            }
+        ],
+        "pricingTables": [
+            {
+                "label": "Labor",
+                "headings": ["Billable Time", "Labor Charge"],
+                "body": [
+                    {
+                        "rowData": ["Less than 30 minutes", "$20"]
+                    },
+                    {
+                        "rowData": ["Less than 1 hour", "$50"]
+                    },
+                    {
+                        "rowData": ["1 to 2 hours", "$75"]
+                    },
+                    {
+                        "rowData": ["More than 2 hours", "$95"]
+                    }
+                ]
+            },
+            {
+                "label": "House Calls",
+                "headings": ["City", "Trip Charge"],
+                "body": [
+                    {
+                        "rowData": ["Milledgeville", "FREE"]
+                    },
+                    {
+                        "rowData": ["Eatonton", "$10"]
+                    },
+                    {
+                        "rowData": ["Greensboro", "$20"]
+                    },
+                    {
+                        "rowData": ["Sparta", "$20"]
+                    },
+                    {
+                        "rowData": ["Gray", "$15"]
+                    },
+                    {
+                        "rowData": ["Macon", "$25"]
+                    },
+                    {
+                        "rowData": ["Gordon", "$20"]
+                    }
+                ]
             }
         ]
     },
