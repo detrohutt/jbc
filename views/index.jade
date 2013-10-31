@@ -11,7 +11,18 @@ block content
       h1
         | Now you've got friends in high-tech places
       p.lead
-        | At Just Better Computers, we want to change what you expect from a computer service provider. We aim to live up to our name and be Just Better, in every way. For us, the customer really does come first. Here are some of our core principles:
+        | At Just Better Computers, we want to change what you expect from a computer service provider. We aim to live up to our name and be Just Better, in every way. For us, the customer really does come first. Here are some of the reasons you'll want to choose us:
+      table.table.table-striped.table-responsive.table-bordered
+        thead
+          tr
+            each val in comparisonTable.headings
+              th= val
+        tbody
+          each val,index in comparisonTable.body
+            tr
+              each val in comparisonTable.body[index].rowData
+                td= val
+
       .row
         .col-xs-12.col-sm-6.col-md-4.col-lg-4
           .well.well-principles
