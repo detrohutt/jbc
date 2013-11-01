@@ -10,17 +10,24 @@
 
 @white: #f9f9f9;
 
+@navbarImg: '/images/noisy_net.png';
+@activeHighlight: rgba(249, 249, 249, 0.1);
+@bgLayer: rgba(255, 255, 255, 0.6);
 @bgImg: '/images/grey_wash_wall.png';
-
 body {
-  padding-top: 80px;
+  background-image: url(@bgImg);
+
+  #bgLayer {
+    padding-top: 80px;
+    background-color: @bgLayer;
+  }
 
   .navbar, .navbar-inverse {
     font-family: gputeks;
     font-size: 19px;
     text-align: center;
-    background-image: url(@bgImg);
-    background-repeat: repeat-x;
+    background-image: url(@navbarImg);
+    background-repeat: repeat;
     background-color: transparent;
 
     a, a:hover, a:active, a:focus {
@@ -32,13 +39,26 @@ body {
     .navbar-header {
 
       .navbar-toggle {
-        box-shadow: 0 0 4px 1px rgba(255,255,255, 0.5) inset, 0 0 2px 1px rgba(0,0,0, 0.8);
+        box-shadow: 0 0 2px 1px rgba(255,255,255, 0.5) inset, 0 0 2px 1px rgba(0,0,0, 0.8);
         font-size: 17px;
         border-color: @white;
         color: @white;
         margin-top: 6px;
         margin-right: 10px;
         padding: 8px 8px;
+        background-color: @darkerGrey;
+
+        &:focus {
+          background-color: @darkerGrey;
+        }
+
+        &:hover {
+          background-color: @lightGrey;
+        }
+
+        &:active {
+          background-color: @darkGrey;
+        }
       }
 
       .navbar-brand {
@@ -63,7 +83,7 @@ body {
         .active {
           
           > a, > a:focus, &.open > a {
-            background-color: rgba(8, 8, 8, 0.6);
+            background-color: @activeHighlight;
             color: @white;
 
             .caret {
@@ -101,7 +121,7 @@ body {
         .open.active {
 
           > a {
-            background-color: rgba(8, 8, 8, 0.6);
+            background-color: @activeHighlight;
           }
         }
       
@@ -134,7 +154,7 @@ body {
               position: static;
               float: none;
               width: auto;
-              margin-top: -5px;
+              margin-top: 0px;
               background-color: transparent;
               border: 0;
               box-shadow: none;
@@ -152,17 +172,18 @@ body {
           ul.dropdown-menu {
             min-width: 154px;
             font-size: 17px;
-            background-image: url(@bgImg);
+            background-image: url(@navbarImg);
             background-repeat: repeat-x;
             border: 0px;
             box-shadow: none;
             display: none;
+            padding-top: 0px;
           
 
             li {
 
-              &.active > a, &.active > a:hover {
-                background-color: rgba(8, 8, 8, 0.6);
+              &.active > a, &.active > a:hover, &.active > a:focus {
+                background-color: @activeHighlight;
                 color: @white;
               }
               
@@ -184,7 +205,8 @@ body {
           }
         }
 
-        @media (max-width: 767px) { 
+        @media (max-width: 767px) {
+
           li {
             a {
               padding: 7px 15px;
@@ -218,7 +240,7 @@ body {
         text-align: left;
       }
 
-      .panel-title {
+      .jumbo {
         font-size: 30px;
       }
 
@@ -226,7 +248,7 @@ body {
         text-align: left;
 
         .panel-title {
-          font-size: 24px;
+          font-size: 20px;
         }
 
         .panel-default {
@@ -282,9 +304,10 @@ html, body {
 }
 
 footer {
+  color: @white;
 	margin-top: 40px;
   padding: 32px 0px;
-  background-image: url(@bgImg);
+  background-image: url(@navbarImg);
   background-repeat: repeat-x;}
 // End Sticky Footer
 
