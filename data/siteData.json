@@ -1,10 +1,22 @@
 {
   "globalData": {
     "title": "Just Better Computers",
-    "activeClass": "active"
+    "activeClass": "active",
+    "phoneNumber": "478-451-7249"
   },
   "pageData": {
     "index": {
+        "comparisonTable": {
+            "headings": ["Compare", "Them", "Us"],
+            "body": [
+                {
+                    "rowData": ["Business Hours", "Weekdays until 5PM", "Every day until 9PM"]
+                },
+                {
+                    "rowData": ["Price(labor)", "$75+ per hour with no limit", "$95 or less"]
+                }
+            ]
+        }
     },
     "services": {
         "serviceList": [
@@ -53,50 +65,108 @@
             {
                 "name": "Printer Setup & Troubleshooting",
                 "description": {
-                    "summary": "pst"
+                    "summary": "Whether you're setting up a new printer or you're having issues with an existing printer, we want to help.",
+                    "list": ["Diagnose/fix an issue with an existing printer OR...", "Help with the purchase of a new printer", "Unbox and set up in the desired space", "Connect printer to the PC or network by USB cable, ethernet cable, or wirelessly", "Install device drivers and any included software", "Configure printer to your preference to optimize for speed, quality, or ink conservation"],
+                    "note": "When diagnosing or fixing printing issues, it is often neccessary to replace the ink cartridge(s). You will need to have replacement cartridges on hand or be willing to purchase them."
                 }
             },
             {
                 "name": "Email Setup & Troubleshooting",
                 "description": {
-                    "summary": "pst"
+                    "summary": "We'll get you set up with a brand new email address, get your current email address working with your new email program or computer, or resolve issues you're having with your existing setup.",
+                    "list": ["Create a new webmail address with your choice of provider(Gmail, Yahoo!, Outlook.com, etc.) OR...", "Diagnose/fix an issue with your existing email setup", "Send a test email to and from your email address to verify that it is working properly"],
+                    "note": "It is often neccessary to have your ISP(Windstream, Charter, Cox, etc.) account password available in order to configure or repair and existing email address. If you don't know or remember your email password, please call your ISP and request it ahead of time."
                 }
             },
             {
                 "name": "Hardware Replacement & Troubleshooting",
                 "description": {
-                    "summary": "pst"
+                    "summary": "If your computer won't come on or any hardware(DVD/Bluray drive, monitor, mouse, keyboard, etc.) is malfunctioning, we will do whatever it takes to get everything back in working order."
                 }
             },
             {
                 "name": "Hardware Upgrades",
                 "description": {
-                    "summary": "pst"
+                    "summary": "Get better performance out of your PC by upgrading the RAM, add extra storage space for pictures and video, give your desktop computer wireless capability, or install a video card for playing games. Whatever type of upgrade you're looking for, we can help."
                 }
             },
             {
                 "name": "Wireless Network Setup & Troubleshooting",
                 "description": {
-                    "summary": "pst"
+                    "summary": "Let us create a wireless network in your home that can be shared by many devices, extend the range of your existing network, or fix problems with your internet connection."
                 }
             },
             {
-                "name": "Data Backup & Transfer",
+                "name": "Data Transfer & Backup",
                 "description": {
-                    "summary": "pst"
+                    "summary": "Hard drives can and do fail. Don't risk losing your important data. Let us help you set up a backup solution or transfer files from your old computer to a new PC.",
+                    "list": ["Transfer data from one computer to another OR...", "Consultation to determine what type of backup solution would suit you best(hardware or online)", "Help with the purchase of any neccessary equipment", "Set up hardware(if applicable) and configure an automatic backup schedule", "Perform an initial backup of all important data"]
                 }            
             },
             {
                 "name": "Data Recovery",
                 "description": {
-                    "summary": "pst"
+                    "summary": "If your hard drive failed and you didn't have a backup, there's still a chance we can get most or all of your data back. We use software tools to attempt repairing corruption or damage to the drive, and then transfer any recovered data to a working drive"
                 }
             },
             {
                 "name": "Personalized Training",
                 "description": {
-                    "summary": "pst"
+                    "summary": "New to using computers and just need some help getting started? We're here for you. Tell us what you want to learn and we'll sit down with you and teach you at your own pace. Even if you aren't sure what you want to know, we'll show you the basics of using a computer and go from there."
                 }
+            },
+            {
+                "name": "And more...",
+                "description": {
+                    "summary": "Don't see what you're looking for in our services list? There's still a good chance we can help. Just give us a call and tell us what you need."
+                }
+            }
+        ],
+        "pricingTables": [
+            {
+                "label": "Labor",
+                "headings": ["Billable Time", "Labor Charge"],
+                "body": [
+                    {
+                        "rowData": ["Less than 30 minutes", "$20"]
+                    },
+                    {
+                        "rowData": ["Less than 1 hour", "$50"]
+                    },
+                    {
+                        "rowData": ["1 to 2 hours", "$75"]
+                    },
+                    {
+                        "rowData": ["More than 2 hours", "$95"]
+                    }
+                ]
+            },
+            {
+                "label": "House Calls",
+                "headings": ["City", "Trip Charge"],
+                "body": [
+                    {
+                        "rowData": ["Milledgeville", "FREE"]
+                    },
+                    {
+                        "rowData": ["Eatonton", "$10"]
+                    },
+                    {
+                        "rowData": ["Greensboro", "$20"]
+                    },
+                    {
+                        "rowData": ["Sparta", "$20"]
+                    },
+                    {
+                        "rowData": ["Gray", "$15"]
+                    },
+                    {
+                        "rowData": ["Macon", "$25"]
+                    },
+                    {
+                        "rowData": ["Gordon", "$20"]
+                    }
+                ]
             }
         ]
     },

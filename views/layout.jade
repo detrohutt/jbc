@@ -37,13 +37,17 @@ html.no-js
 
     .navbar.navbar-fixed-top.navbar-inverse
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+        div
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.main-nav')
+            span.sr-only Toggle navigation
+            | Menu
+          //p.menu-label.visible-xs Menu
         a.navbar-brand(href='/index')
-          img.img-responsive(src='/images/jbc_logo.png')
+          img.img-responsive.visible-lg.visible-md(src='/images/jbc_logo.png')
+          img.img-responsive.hidden-lg.hidden-md(src='/images/jbc_logo_letters.png')
+        p.phone.visible-xs 
+          a(href='tel:4784517249')
+            = phoneNumber
       .navbar-collapse.collapse.main-nav
         ul.nav.navbar-nav
           li(class=index)
@@ -61,28 +65,28 @@ html.no-js
                 a(href='testimonials') Testimonials
               li(class=givingBack)
                 a(href='giving-back') Giving Back
-        p.phone.pull-right.visible-lg 478-451-7249
+        p.phone.pull-right.hidden-xs 478-451-7249
 
+    #bgLayer
+      #wrap
+        block content
+        #push
 
-    #wrap
-      block content
-      #push
+      footer
+        p.text-center
+          - var date = new Date, date = date.getFullYear();
+          | &copy; #{date} Just Better Computers, all rights reserved. Site created by A.J. Roberts
 
-    footer
-      p.text-muted.text-center
-        - var date = new Date, date = date.getFullYear();
-        | &copy; #{date} Just Better Computers, all rights reserved. Site created by A.J. Roberts
-
-    
-    script.
-      window.jQuery
-    script(src='/javascripts/main.js')
-    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
-    //-
+      
       script.
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+        window.jQuery
+      script(src='/javascripts/main.js')
+      //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+      //-
+        script.
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='//www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
