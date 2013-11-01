@@ -19,7 +19,7 @@ block content
       .col-xs-12.col-sm-4.col-md-4.col-lg-4
         .panel.panel-success
           .panel-heading
-            h2.panel-title Pricing
+            .panel-title.jumbo Pricing
           .panel-body
             +makeTables()
             h3
@@ -27,11 +27,10 @@ block content
             br
             | Parts are never marked up. You pay what we pay. You may optionally pay $4 extra for 1-day shipping on select parts.
       .col-xs-12.col-sm-8.col-md-8.col-lg-8
-        .well
-          h2
-            | Services we offer:
-          h3
-            | Click an item for more info
+        h2
+          | Services we offer:
+        h3
+          | Click an item for more info
         #accordion.panel-group
           - for (var i = 0; i < serviceList.length; i++)
             .panel.panel-default
