@@ -1,64 +1,133 @@
-.logo-container {
-
+.logo {
+    @baseScale: 1em;
     @red: #ff0000;
     @green: #00ff00;
     @blue: #0000ff;
 
+    &.logo-inverse {
+        @red: #D61128;
+        @green: #05AC20;
+        @blue: #0D3DE2;
+    }
+
     font-family: gputeks;
-    font-size: 40px;
+    font-size: @baseScale;
     position: relative;
     line-height: normal;
+    width: 9.4em;
+    height: 4.7em;
     
-    & > * {
-        position: absolute;
-        left: 200px;
+    // Base Styling
+    .logo-container {
+        position: relative;
+        top: -2em;
+
+        & > * {
+            position: absolute;
+        }
+
+        .j, .ust {
+            color: @red;
+        }
+
+        .b, .etter {
+            color: @green;
+        }
+
+        .c, .omputers {
+            color: @blue;
+        }
+
+        .j {
+            font-size: 2.12em;
+            top: 0.74em;
+            left: 0.52em;
+        }
+
+        .b {
+            font-size: 2.12em;
+            top: 1.55em;
+            left: 0.76em;
+        }
+
+        .c {
+            font-size: 5em;
+            top: 0;
+            left: 0;
+        }
+
+        .ust {
+            font-size: 1.4em;
+            top: 1.64em;
+            left: 1.5em;
+        }
+
+        .etter {
+            font-size: 1.4em;
+            top: 2.52em;
+            left: 2.14em;
+        }
+
+        .omputers {
+            font-size: 1.2em;
+            top: 3.93em;
+            left: 2.5em;
+        }
+
+        // Inserting Content Text
+        .text(@content) {
+            &:before {
+                content: @content;
+            }
+        }
+
+        .c {
+            .text('C');
+        }
+        .j {
+            .text('J');
+        }
+        .b {
+            .text('B');
+        }
+        .omputers {
+            .text('omputers');
+        }
+        .ust {
+            .text('ust');
+        }
+        .etter {
+            .text('etter');
+        }
     }
 
-    .j, .ust {
-        color: @red;
-    }
+    // Addon Styling
 
-    .b, .etter {
-        color: @green;
-    }
+        // Abbr style
+        &.abbr {
+            width: 3.2em;
 
-    .c, .omputers {
-        color: @blue;
-    }
+            & > .logo-container {
 
-    .j {
-        font-size: 2.12em;
-        top: 0.74em;
-        left: 0.52em;
-    }
+                & > * {
+                    &.ust, &.etter, &.omputers {
+                        display: none;
+                    }
+                }
+            }
+        }
 
-    .b {
-        font-size: 2.12em;
-        top: 1.55em;
-        left: 0.76em;
-    }
-
-    .c {
-        font-size: 5em;
-        top: 0;
-        left: 0;
-    }
-
-    .ust {
-        font-size: 1.4em;
-        top: 1.64em;
-        left: 1.5em;
-    }
-
-    .etter {
-        font-size: 1.4em;
-        top: 2.52em;
-        left: 2.14em;
-    }
-
-    .omputers {
-        font-size: 1.2em;
-        top: 3.93em;
-        left: 2.5em;
-    }
+        // size Styling
+        &.logo-xs {
+            font-size: (@baseScale * .3);
+        }
+        &.logo-sm {
+            font-size: (@baseScale * .6);
+        }
+        &.logo-lg {
+            font-size: (@baseScale * 2);
+        }
+        &.logo-xl {
+            font-size: (@baseScale * 3);
+        }
 }
