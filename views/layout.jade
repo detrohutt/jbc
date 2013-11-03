@@ -5,6 +5,15 @@ mixin ifActive(checkThis)
   else
     li
       a(href='/' + checkThis) #{linkDesc}
+mixin logo(classes)
+  .logo(class=classes)
+      .logo-container
+        .j
+        .b
+        .c
+        .ust
+        .etter
+        .omputers
 doctype
 //if lt IE 7
   <html class="no-js lt-ie9 lt-ie8 lt-ie7">
@@ -43,8 +52,9 @@ html.no-js
             | Menu
           //p.menu-label.visible-xs Menu
         a.navbar-brand(href='/index')
-          img.img-responsive.visible-lg.visible-md(src='/images/jbc_logo.png')
-          img.img-responsive.hidden-lg.hidden-md(src='/images/jbc_logo_letters.png')
+          +logo("abbr")
+          //img.img-responsive.visible-lg.visible-md(src='/images/jbc_logo.png')
+          //img.img-responsive.hidden-lg.hidden-md(src='/images/jbc_logo_letters.png')
         p.phone.visible-xs 
           a(href='tel:4784517249')
             = phoneNumber
