@@ -5,6 +5,18 @@ mixin ifActive(checkThis)
   else
     li
       a(href='/' + checkThis) #{linkDesc}
+
+mixin logo(classes)
+  .logo(class=classes)
+      .logo-container
+        .j
+        .b
+        .c
+        .ust
+        .etter
+        .omputers
+
+
 doctype
 //if lt IE 7
   <html class="no-js lt-ie9 lt-ie8 lt-ie7">
@@ -37,19 +49,18 @@ html.no-js
         | to improve your experience.
 
     block content
-    .logo-container
-      .j
-        | J
-      .b
-        | B
-      .c
-        | C
-      .ust
-        | ust
-      .etter
-        | etter
-      .omputers
-        | omputers
+      .pull-left
+        mixin logo('logo-xl')
+        mixin logo('logo-lg')
+        mixin logo
+        mixin logo('logo-sm')
+        mixin logo('logo-xs')
+      div.pull-left
+        mixin logo(['logo-xl', 'abbr'])
+        mixin logo(['logo-lg', 'abbr'])
+        mixin logo('abbr')
+        mixin logo(['logo-sm', 'abbr'])
+        mixin logo(['logo-xs', 'abbr'])
       
     script.
       window.jQuery
