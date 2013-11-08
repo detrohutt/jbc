@@ -36,6 +36,10 @@ html.no-js
     script(src='/javascripts/jquery/jquery.js')
     script(src='/javascripts/bootstrap/bootstrap.js')
     script(src='/javascripts/modernizr/modernizr.js')
+    script(text='text/javascript').
+      if (!Modernizr.mq('only all')) {
+        document.write('\x3Cscript type="text/javascript" src="/javascripts/respond/respond.min.js">\x3C/script>');
+      }
     script(src='/javascripts/jquery/slidingdropdown.js')
   body
     //if lt IE 7
